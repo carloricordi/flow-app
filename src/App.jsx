@@ -620,7 +620,7 @@ function MorningWizard({today, patch, store, pg, onComplete, onSkipAll}){
             <p style={S.wizSub}>Pick your listening, then go.</p>
             <div style={{display:"flex",flexDirection:"column",gap:8,marginTop:16}}>
               {listenOptions.map((opt,i)=>(
-                <button key={i} style={{...S.listenCard,...(selectedListening===i?S.listenActive:{}),(opt.highlighted&&selectedListening===i?{borderColor:C.green,background:C.greenBg}:{})}} onClick={()=>setSelectedListening(i)}>
+                <button key={i} style={{...S.listenCard,...(selectedListening===i?S.listenActive:{}),...(opt.highlighted&&selectedListening===i?{borderColor:C.green,background:C.greenBg}:{})}} onClick={()=>setSelectedListening(i)}>
                   <span style={{fontSize:22,flexShrink:0}}>{opt.icon}</span>
                   <div style={{flex:1,textAlign:"left"}}>
                     <p style={{margin:0,fontSize:14,fontWeight:600,color:selectedListening===i?C.text:C.muted}}>{opt.label}</p>
@@ -911,11 +911,11 @@ function DayTab({today,patch,store,pg,dow}){
             <div key={b.time+i} ref={el=>refs.current[i]=el}
               style={{...S.block,...(isNow?S.blockNow:{}),...(b.nudge?S.blockGreen:{}),...(b.recurring?{borderColor:b.color+"66",background:b.color+"0d"}:{})}}>
               <div style={S.bTime}>
-                <span style={{...S.bTL,...(isNow?{color:C.purple}:{}),(b.recurring?{color:b.color}:{})}}>{b.time}</span>
+                <span style={{...S.bTL,...(isNow?{color:C.purple}:{}),...(b.recurring?{color:b.color}:{})}}>{b.time}</span>
                 {isNow&&<span style={S.nowPill}>NOW</span>}
               </div>
               <div style={S.bBody}>
-                <p style={{...S.bDesc,...(b.nudge?{color:C.green,fontWeight:600}:{}),(b.recurring?{color:b.color,fontWeight:600}:{})}}>{b.label}</p>
+                <p style={{...S.bDesc,...(b.nudge?{color:C.green,fontWeight:600}:{}),...(b.recurring?{color:b.color,fontWeight:600}:{})}}>{b.label}</p>
                 {!b.nudge&&!b.recurring&&<input style={S.tInput} placeholder="+ add task" value={tasks[b.time]||""} onChange={e=>patch({tasks:{...tasks,[b.time]:e.target.value}})}/>}
               </div>
             </div>
