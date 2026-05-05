@@ -1,0 +1,256 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-05-05",
+  "blockName": "May–June 2026 marathon base block",
+  "athleteProfile": {
+    "name": "Carlo",
+    "milePR": "7:28",
+    "tempoPace": "9:00/mi",
+    "intervalPaceTarget": "7:30-8:30/mi",
+    "easyPace": "10:30-11:30/mi",
+    "longRunPace": "10:30-11:00/mi",
+    "goalRace": "Miami Marathon 2027"
+  },
+  "effortScale": {
+    "easy":     { "talkTest": "full sentences",            "rpe": "4-5/10", "hrZone": "Z2" },
+    "tempo":    { "talkTest": "short phrases, controlled", "rpe": "7/10",   "hrZone": "Z3-low Z4" },
+    "interval": { "talkTest": "3-4 words max",             "rpe": "8/10",   "hrZone": "Z4" },
+    "sprint":   { "talkTest": "cannot talk",               "rpe": "10/10",  "hrZone": "Z5", "note": "Avoid sprinting in marathon block" }
+  },
+
+  "weeklyTemplate": {
+    "monday":    "Full body strength",
+    "tuesday":   "Interval or Tempo run (alternates by date)",
+    "wednesday": "Pilates 7:00 AM + 10 min hip / posterior chain stretching",
+    "thursday":  "Full body strength",
+    "friday":    "Easy run (Z2)",
+    "saturday":  "Long run",
+    "sunday":    "Rest or active walk"
+  },
+
+  "schedule": {
+    "2026-05-05": { "templateRef": "intervals_5x3_2",  "label": "Interval Tuesday — wk 1" },
+    "2026-05-08": { "templateRef": "easy_run",         "distance": "3 mi",   "label": "Easy Friday — wk 1" },
+    "2026-05-09": { "templateRef": "long_run",         "distance": "10 mi",  "label": "Long Saturday — wk 1" },
+
+    "2026-05-12": { "templateRef": "tempo",            "distance": "4 mi",   "pace": "9:00/mi", "label": "Tempo Tuesday — wk 2" },
+    "2026-05-15": { "templateRef": "easy_run",         "distance": "3.25 mi","label": "Easy Friday — wk 2" },
+    "2026-05-16": { "templateRef": "long_run",         "distance": "11 mi",  "label": "Long Saturday — wk 2" },
+
+    "2026-05-19": { "templateRef": "intervals_6x3_90", "label": "Interval Tuesday — wk 3" },
+    "2026-05-22": { "templateRef": "easy_run",         "distance": "3.5 mi", "label": "Easy Friday — wk 3" },
+    "2026-05-23": { "templateRef": "long_run",         "distance": "12 mi",  "label": "Long Saturday — wk 3" },
+
+    "2026-05-26": { "templateRef": "tempo",            "distance": "4.5 mi", "pace": "8:50/mi", "label": "Tempo Tuesday — wk 4" },
+    "2026-05-29": { "templateRef": "easy_run",         "distance": "3.75 mi","label": "Easy Friday — wk 4" },
+    "2026-05-30": { "templateRef": "long_run",         "distance": "12 mi",  "label": "Long Saturday — wk 4 (cutback OK)" },
+
+    "2026-06-02": { "templateRef": "intervals_6x4_90", "label": "Interval Tuesday — wk 5" },
+    "2026-06-05": { "templateRef": "easy_run",         "distance": "4 mi",   "label": "Easy Friday — wk 5" },
+    "2026-06-06": { "templateRef": "long_run",         "distance": "13 mi",  "label": "Long Saturday — wk 5" },
+
+    "2026-06-09": { "templateRef": "tempo",            "distance": "5 mi",   "pace": "8:45/mi", "label": "Tempo Tuesday — wk 6" },
+    "2026-06-12": { "templateRef": "easy_run",         "distance": "4.25 mi","label": "Easy Friday — wk 6" },
+    "2026-06-13": { "templateRef": "long_run",         "distance": "13 mi",  "label": "Long Saturday — wk 6" },
+
+    "2026-06-16": { "templateRef": "intervals_7x4_90", "label": "Interval Tuesday — wk 7" },
+    "2026-06-19": { "templateRef": "easy_run",         "distance": "4.5 mi", "label": "Easy Friday — wk 7" },
+    "2026-06-20": { "templateRef": "long_run",         "distance": "14 mi",  "label": "Long Saturday — wk 7" },
+
+    "2026-06-23": { "templateRef": "tempo",            "distance": "5 mi",   "pace": "8:40/mi", "label": "Tempo Tuesday — wk 8" },
+    "2026-06-26": { "templateRef": "easy_run",         "distance": "5 mi",   "label": "Easy Friday — wk 8" },
+    "2026-06-27": { "templateRef": "long_run",         "distance": "14 mi",  "label": "Long Saturday — wk 8" },
+
+    "2026-06-30": { "templateRef": "intervals_8x4_90", "label": "Interval Tuesday — wk 9 (peak interval session)" }
+  },
+
+  "templates": {
+
+    "intervals_5x3_2": {
+      "displayName": "Interval Run — 5x3min / 2min jog",
+      "type": "run-intervals",
+      "summary": "5 rounds of 3 min hard / 2 min easy jog",
+      "totalDuration": "40-45 min",
+      "segments": [
+        { "phase": "warmup",   "label": "1 mile easy",          "distance": "1 mi", "duration": "~10 min", "pace": "11:00-11:30/mi", "effort": "easy", "cue": "Conversational. Wake the legs up." },
+        { "phase": "intervals","label": "5 rounds", "rounds": 5,
+          "work": { "duration": "3 min", "pace": "7:45-8:30/mi",  "effort": "interval", "cue": "8/10 effort. 3-4 words max." },
+          "rest": { "duration": "2 min", "pace": "12:00-13:00/mi", "effort": "very easy jog", "cue": "Embarrassingly slow. Real recovery makes the work hard." } },
+        { "phase": "cooldown", "label": "Walk until HR settles", "duration": "5-10 min", "effort": "walk" }
+      ],
+      "coachingCue": "Don't sprint. Pace honestly so round 5 holds up."
+    },
+
+    "intervals_6x3_90": {
+      "displayName": "Interval Run — 6x3min / 90sec jog",
+      "type": "run-intervals",
+      "summary": "6 rounds, shorter recovery — density bump from wk 1",
+      "totalDuration": "45-50 min",
+      "segments": [
+        { "phase": "warmup",   "label": "1 mile easy",          "distance": "1 mi", "duration": "~10 min", "pace": "11:00-11:30/mi", "effort": "easy" },
+        { "phase": "intervals","label": "6 rounds", "rounds": 6,
+          "work": { "duration": "3 min",   "pace": "7:45-8:30/mi", "effort": "interval", "cue": "8/10. The shorter rest will tempt you to slow the work — don't." },
+          "rest": { "duration": "90 sec",  "pace": "12:00+/mi",     "effort": "easy jog", "cue": "Tighter window — keep moving but don't push." } },
+        { "phase": "cooldown", "label": "Walk until HR settles", "duration": "5-10 min", "effort": "walk" }
+      ],
+      "coachingCue": "First progression — added a rep AND cut the rest. Expect this to feel harder than wk 1."
+    },
+
+    "intervals_6x4_90": {
+      "displayName": "Interval Run — 6x4min / 90sec jog",
+      "type": "run-intervals",
+      "summary": "6 rounds, longer work — pure VO2 stimulus",
+      "totalDuration": "50-55 min",
+      "segments": [
+        { "phase": "warmup",   "label": "1 mile easy",          "distance": "1 mi", "duration": "~10 min", "pace": "11:00-11:30/mi", "effort": "easy" },
+        { "phase": "intervals","label": "6 rounds", "rounds": 6,
+          "work": { "duration": "4 min",   "pace": "8:00-8:30/mi", "effort": "interval", "cue": "8/10. 4 minutes is long — settle in, don't blast off." },
+          "rest": { "duration": "90 sec",  "pace": "12:00+/mi",     "effort": "easy jog" } },
+        { "phase": "cooldown", "label": "Walk until HR settles", "duration": "5-10 min", "effort": "walk" }
+      ],
+      "coachingCue": "Stretching the work intervals to 4 min. Slightly more conservative pace than the 3-min sessions."
+    },
+
+    "intervals_7x4_90": {
+      "displayName": "Interval Run — 7x4min / 90sec jog",
+      "type": "run-intervals",
+      "summary": "7 rounds — biggest aerobic stimulus to date",
+      "totalDuration": "55-60 min",
+      "segments": [
+        { "phase": "warmup",   "label": "1 mile easy",          "distance": "1 mi", "duration": "~10 min", "pace": "11:00-11:30/mi", "effort": "easy" },
+        { "phase": "intervals","label": "7 rounds", "rounds": 7,
+          "work": { "duration": "4 min",   "pace": "8:00-8:30/mi", "effort": "interval", "cue": "Pace must hold for round 7. Conservative early." },
+          "rest": { "duration": "90 sec",  "pace": "12:00+/mi",     "effort": "easy jog" } },
+        { "phase": "cooldown", "label": "Walk until HR settles", "duration": "5-10 min", "effort": "walk" }
+      ],
+      "coachingCue": "Mental game now. If you can hit round 7 at the same pace as round 1, that's the win."
+    },
+
+    "intervals_8x4_90": {
+      "displayName": "Interval Run — 8x4min / 90sec jog",
+      "type": "run-intervals",
+      "summary": "Peak interval session of the block — 32 min of work",
+      "totalDuration": "60-65 min",
+      "segments": [
+        { "phase": "warmup",   "label": "1 mile easy",          "distance": "1 mi", "duration": "~10 min", "pace": "11:00-11:30/mi", "effort": "easy" },
+        { "phase": "intervals","label": "8 rounds", "rounds": 8,
+          "work": { "duration": "4 min",   "pace": "8:00-8:30/mi", "effort": "interval", "cue": "32 minutes of total work. This is the biggest VO2 day of the block." },
+          "rest": { "duration": "90 sec",  "pace": "12:00+/mi",     "effort": "easy jog" } },
+        { "phase": "cooldown", "label": "Walk until HR settles", "duration": "5-10 min", "effort": "walk" }
+      ],
+      "coachingCue": "Peak interval day. Eat well after, this is a glycogen-burner."
+    },
+
+    "tempo": {
+      "displayName": "Tempo Run",
+      "type": "run-tempo",
+      "summary": "Continuous threshold effort — comfortably hard, not a race",
+      "totalDuration": "varies by week — see schedule",
+      "segments": [
+        { "phase": "warmup",   "label": "1 mile easy",          "distance": "1 mi", "duration": "~10 min", "pace": "11:00-11:30/mi", "effort": "easy", "cue": "Don't skip this. Tempo on cold legs always blows up." },
+        { "phase": "main",     "label": "Tempo body — pace per schedule entry", "effort": "tempo", "cue": "Short phrases only. If you can hold a conversation, push slightly. If you're gasping, ease off." },
+        { "phase": "cooldown", "label": "Walk + 5 min easy jog", "duration": "10 min", "effort": "easy", "cue": "Gradual cooldown protects the legs for the rest of the week." }
+      ],
+      "coachingCue": "Tempo Tuesdays get faster as the block progresses (9:00 → 8:40). Trust the pace creep — you're earning it."
+    },
+
+    "easy_run": {
+      "displayName": "Easy Run",
+      "type": "run-easy",
+      "summary": "Aerobic shake-out, conversational pace, Z2 only",
+      "totalDuration": "30-50 min depending on distance",
+      "segments": [
+        { "phase": "warmup",   "label": "First 5 min very easy",  "duration": "5 min",  "pace": "11:30-12:00/mi", "effort": "shuffle", "cue": "Wake the legs. No rush." },
+        { "phase": "main",     "label": "Easy aerobic body",                                "pace": "10:30-11:30/mi", "effort": "easy",    "cue": "Full sentences. Z2 only. If you can't talk, slow down." },
+        { "phase": "cooldown", "label": "Walk it in",            "duration": "5 min",  "effort": "walk" }
+      ],
+      "coachingCue": "This run exists to add aerobic volume without adding fatigue. Slower than feels right."
+    },
+
+    "long_run": {
+      "displayName": "Long Run",
+      "type": "run-long",
+      "summary": "Marathon-prep distance day — fueling is the workout",
+      "totalDuration": "scales with distance (currently 10–14 mi)",
+      "segments": [
+        { "phase": "pre-run",  "label": "Pre-run fueling", "items": ["Half Fairlife protein shake", "Water + electrolyte sip", "1 gel per 45 min planned in the pocket"] },
+        { "phase": "warmup",   "label": "First mile is the warmup", "distance": "1 mi", "duration": "~10-11 min", "pace": "11:00-11:30/mi", "effort": "easy", "cue": "Resist the urge to start at goal pace. The first mile is always too fast." },
+        { "phase": "main",     "label": "Long run body", "pace": "10:30-11:00/mi", "effort": "easy to steady", "cue": "Conversational. Slow down if breathing tightens. Aerobic building, not racing." },
+        { "phase": "fueling",  "label": "MANDATORY on runs 10mi+", "rule": "Gel every 45 min starting at mile 3", "cue": "Non-negotiable. The mile-14 wall on the 16-miler was a fueling failure." },
+        { "phase": "cooldown", "label": "Walk and rehydrate", "duration": "5-10 min", "items": ["Walk until HR drops below 110", "Waterboy electrolytes", "Finish protein shake", "Half espresso optional"] }
+      ],
+      "coachingCue": "Eat well at lunch — glycogen replenishment matters for next week.",
+      "fuelingReminder": "Gel every 45 min starting mile 3. Set a watch alarm if needed."
+    },
+
+    "strength_full_body_a": {
+      "displayName": "Full Body Strength (Mon)",
+      "type": "strength",
+      "summary": "Bulletproof-the-body session — squat/hinge focus, single-leg, core",
+      "totalDuration": "45-60 min",
+      "segments": [
+        { "phase": "warmup",   "duration": "8 min",  "items": ["World's greatest stretch x 3/side", "Hip airplanes x 6/side", "Glute bridges x 12", "Bird dogs x 8/side"] },
+        { "phase": "main",     "duration": "30-40 min", "format": "3 rounds, controlled tempo",
+          "items": ["Goblet squat — 3x10", "Single-leg RDL — 3x8/side", "Push-up to renegade row — 3x8/side", "Reverse lunge with knee drive — 3x8/side", "Pallof press — 3x10/side", "Dead bug — 3x10/side"] },
+        { "phase": "cooldown", "duration": "5 min",  "items": ["Pigeon pose — 60s/side", "Couch stretch — 60s/side", "Hamstring stretch — 60s/side"] }
+      ],
+      "coachingCue": "Q2 focus: functional strength + flexibility. Quality over load."
+    },
+
+    "strength_full_body_b": {
+      "displayName": "Full Body Strength (Thu)",
+      "type": "strength",
+      "summary": "Hinge/press focus, core stability — same philosophy as Mon, different lifts",
+      "totalDuration": "45-60 min",
+      "segments": [
+        { "phase": "warmup",   "duration": "8 min", "items": ["World's greatest stretch x 3/side", "Hip airplanes x 6/side", "Glute bridges x 12", "Bird dogs x 8/side"] },
+        { "phase": "main",     "duration": "30-40 min", "format": "3 rounds, controlled tempo",
+          "items": ["Trap bar deadlift — 3x6 (moderate)", "Bulgarian split squat — 3x8/side", "DB bench press — 3x10", "Single-arm DB row — 3x8/side", "Side plank with reach-through — 3x8/side", "Hollow body hold — 3x30s"] },
+        { "phase": "cooldown", "duration": "5 min", "items": ["Pigeon pose — 60s/side", "Couch stretch — 60s/side", "Lat stretch — 60s/side"] }
+      ],
+      "coachingCue": "If legs feel beat from Tuesday, drop to 2 rounds. Recovery > heroism."
+    },
+
+    "pilates": {
+      "displayName": "Pilates + Mobility",
+      "type": "recovery",
+      "summary": "45-min Pilates class + 10 min targeted hip / posterior chain stretching",
+      "totalDuration": "55 min",
+      "segments": [
+        { "phase": "main",     "label": "Pilates class",       "duration": "45 min", "startTime": "07:00", "cue": "Core stability and hip mobility — your structural limiters." },
+        { "phase": "mobility", "label": "Post-class stretches","duration": "10 min", "items": ["Pigeon pose — 90s/side", "Couch stretch — 90s/side", "90/90 hip switches — 8 reps", "Standing hamstring stretch — 60s/side", "Thread the needle — 60s/side"] }
+      ],
+      "coachingCue": "This day IS your strength training right now. Pilates does the work hack squats can't.",
+      "noRunOrGym": true
+    },
+
+    "rest": {
+      "displayName": "Rest / Active Recovery",
+      "type": "rest",
+      "summary": "True rest day. Optional long walk or low-impact movement.",
+      "totalDuration": "0-60 min (optional)",
+      "segments": [
+        { "phase": "optional", "label": "If you feel like moving", "options": ["30-60 min easy walk", "Light bike or swim", "Yoga or full-body mobility flow"] }
+      ],
+      "coachingCue": "Recovery IS training. Adaptation happens on rest days. No guilt about doing nothing."
+    }
+  },
+
+  "dayDefaults": {
+    "monday":    { "templateRef": "strength_full_body_a" },
+    "tuesday":   { "templateRef": "intervals_5x3_2", "note": "Override via schedule entry — Tuesdays alternate intervals/tempo." },
+    "wednesday": { "templateRef": "pilates" },
+    "thursday":  { "templateRef": "strength_full_body_b" },
+    "friday":    { "templateRef": "easy_run", "distance": "3 mi" },
+    "saturday":  { "templateRef": "long_run", "distance": "10 mi" },
+    "sunday":    { "templateRef": "rest" }
+  },
+
+  "globalNotes": {
+    "blockOverview": "8-week base block, May 5 – Jun 30 2026. Tuesdays alternate intervals/tempo. Fridays progress 3→5mi. Saturdays climb 10→14mi by end of June, then 14→16mi target through July.",
+    "fuelingRule": "Any run 10+ mi requires a gel every 45 min starting mile 3. Surface this banner whenever distance ≥ 10 mi.",
+    "effortPhilosophy": "Q2 2026 = bulletproof the body. Lower-load strength, more mobility, run paces honest. Cardio is not the limiter — structural strength, hips, core are.",
+    "weeklyReview": "Re-check this spec every Sunday. Adjust if Carlo PRs, misses a session, or a workout flags fatigue.",
+    "appResolutionOrder": "1) Look up today's date in `schedule`. 2) If found, render `templates[templateRef]` and overlay schedule-entry fields (distance, pace, label). 3) If not found, fall back to `dayDefaults[<dayOfWeek>]`."
+  }
+}
